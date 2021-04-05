@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ContactsDemo 1.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>ContactsDemo.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,16 +18,6 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>74360C132611DDE100D8CA6F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>74360C2C2611DDE300D8CA6F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>74360C372611DDE300D8CA6F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
