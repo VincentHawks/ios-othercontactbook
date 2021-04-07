@@ -192,13 +192,32 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5YK-MM-BRe" customClass="AvatarView" customModule="ContactsDemo" customModuleProvider="target">
+                                <rect key="frame" x="142.5" y="158" width="129" height="129"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5YK-MM-BRe" secondAttribute="height" multiplier="1:1" id="eBK-Bw-xeL"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hch-Nr-knj" customClass="YYAnimatedImageView">
+                                <rect key="frame" x="142.5" y="158" width="129" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hch-Nr-knj" secondAttribute="height" multiplier="1:1" id="K8P-T4-E51"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VUG-TB-5rn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="5YK-MM-BRe" firstAttribute="centerX" secondItem="tlH-rE-YFy" secondAttribute="centerX" id="CEU-dQ-EYJ"/>
+                            <constraint firstItem="5YK-MM-BRe" firstAttribute="top" secondItem="VUG-TB-5rn" secondAttribute="top" constant="70" id="Gqr-Mo-zhx"/>
                             <constraint firstItem="gB4-8K-ojq" firstAttribute="centerY" secondItem="tlH-rE-YFy" secondAttribute="centerY" id="KE4-Sc-Emk"/>
+                            <constraint firstItem="gB4-8K-ojq" firstAttribute="top" secondItem="hch-Nr-knj" secondAttribute="bottom" constant="90" id="PLs-DC-cDP"/>
+                            <constraint firstItem="gB4-8K-ojq" firstAttribute="top" secondItem="5YK-MM-BRe" secondAttribute="bottom" constant="90" id="ZoR-rQ-dQC"/>
                             <constraint firstItem="gB4-8K-ojq" firstAttribute="leading" secondItem="VUG-TB-5rn" secondAttribute="leading" constant="30" id="aUG-Q4-fjw"/>
+                            <constraint firstItem="hch-Nr-knj" firstAttribute="top" secondItem="VUG-TB-5rn" secondAttribute="top" constant="70" id="bHI-JS-ogc"/>
                             <constraint firstItem="gB4-8K-ojq" firstAttribute="centerX" secondItem="tlH-rE-YFy" secondAttribute="centerX" id="fMq-hw-XgT"/>
+                            <constraint firstItem="hch-Nr-knj" firstAttribute="centerX" secondItem="tlH-rE-YFy" secondAttribute="centerX" id="z6e-JW-k5l"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="C44-R2-Guj">
@@ -210,8 +229,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="firstNameField" destination="bTT-bl-aVq" id="Ntd-5c-otG"/>
+                        <outlet property="gifAvatar" destination="hch-Nr-knj" id="5s4-u9-AAb"/>
                         <outlet property="lastNameField" destination="D7U-5B-LRq" id="N7p-SF-wdO"/>
                         <outlet property="phoneField" destination="hDn-ac-7Pe" id="NvB-Gb-02f"/>
+                        <outlet property="proceduralAvatar" destination="5YK-MM-BRe" id="NCN-B1-V92"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLb-Al-d4J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

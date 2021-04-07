@@ -21,6 +21,7 @@ class GistContactsRepo: ContactsRepository {
         let lastname: String
         let phone: String
         let email: String
+        let photoUrl: String?
     }
     
     init(url: URL) {
@@ -30,11 +31,16 @@ class GistContactsRepo: ContactsRepository {
     
     private func parse(json: Data) throws -> [Contact] {
         return try self.decoder.decode([ContactsResponse].self, from: json).map {
-            Contact(recordId: UUID().uuidString,
+            var url: URL?
+            if let urlString = $0.photoUrl {
+                url = URL(string: urlString)
+            }
+            return Contact(recordId: UUID().uuidString,
                     firstName: $0.firstname,
                     lastName: $0.lastname,
                     phone: $0.phone,
-                    birthday: nil)
+                    birthday: nil,
+                    photoUrl: url)
         }
     }
     
@@ -90,7 +96,8 @@ class GistContactsRepo: ContactsRepository {
             firstName: contact.firstName,
             lastName: contact.lastName,
             phone: contact.phone,
-            birthday: contact.birthday
+            birthday: contact.birthday,
+            photoUrl: contact.photoUrl
         )
         contacts.append(contactWithID)
     }

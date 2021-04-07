@@ -10,10 +10,10 @@ import Foundation
 class HardcodedRepo {
     private var records: [CallRecord] = []
     private var contacts: [Contact] = [
-        Contact(recordId: "1", firstName: "1", lastName: "", phone: "1234567890", birthday: nil),
-        Contact(recordId: "2", firstName: "2", lastName: "", phone: "657686433", birthday: nil),
-        Contact(recordId: "3", firstName: "3", lastName: "", phone: "432563", birthday: nil),
-        Contact(recordId: "4", firstName: "4", lastName: "", phone: "8756765", birthday: nil),
+        Contact(recordId: "1", firstName: "1", lastName: "", phone: "1234567890", birthday: nil, photoUrl: nil),
+        Contact(recordId: "2", firstName: "2", lastName: "", phone: "657686433", birthday: nil, photoUrl: nil),
+        Contact(recordId: "3", firstName: "3", lastName: "", phone: "432563", birthday: nil, photoUrl: nil),
+        Contact(recordId: "4", firstName: "4", lastName: "", phone: "8756765", birthday: nil, photoUrl: nil),
     ]
 }
 
@@ -23,13 +23,16 @@ extension HardcodedRepo: ContactsRepository {
     }
     
     func add(contact: ContactsData) throws {
-        contacts.append(Contact(
-                            recordId: UUID().uuidString,
-                            firstName: contact.firstName,
-                            lastName: contact.lastName,
-                            phone: contact.phone,
-                            birthday: contact.birthday
-        ))
+        contacts.append(
+            Contact(
+                recordId: UUID().uuidString,
+                firstName: contact.firstName,
+                lastName: contact.lastName,
+                phone: contact.phone,
+                birthday: contact.birthday,
+                photoUrl: contact.photoUrl
+            )
+        )
     }
     
     func delete(contact: Contact) throws {

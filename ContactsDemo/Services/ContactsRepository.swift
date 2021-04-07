@@ -13,6 +13,7 @@ struct Contact {
     let lastName: String
     let phone: String
     let birthday: DateComponents?
+    let photoUrl: URL?
 }
 
 struct ContactsData {
@@ -20,6 +21,7 @@ struct ContactsData {
     let lastName: String
     let phone: String
     let birthday: DateComponents?
+    let photoUrl: URL?
 }
 
 

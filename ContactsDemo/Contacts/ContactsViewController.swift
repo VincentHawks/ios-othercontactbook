@@ -119,9 +119,3 @@ extension ContactsViewController: UITableViewDelegate {
         output.contactPressed(contact)
     }
 }
-
-extension ContactsViewController : CNContactViewControllerDelegate {
-    func contactViewController(_ viewController: CNContactViewController, didCompleteWith contact: CNContact?) {
-        print(#function)
-    }
-}
